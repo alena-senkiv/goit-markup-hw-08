@@ -1,0 +1,49 @@
+// /* Sort button */
+
+.sort {
+  // .sort__label
+  &__label {
+    margin-bottom: 15px;
+    padding: 6px 22px;
+
+    @include fontProperty($size: 16px, $weight: 500, $lh: 1.6);
+
+    background-color: $secondaryBgColor;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: background-color $timing, color $timing, box-shadow $timing;
+
+    // .sort__label:not(:last-child)
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  // .sort__button:checked + .sort__label, .sort__button:hover + .sort__label, .sort__button:focus + .sort__label
+  &__button:checked + &__label,
+  &__button:hover + &__label,
+  &__button:focus + &__label {
+    color: $primaryWhiteColor;
+    background-color: $colorAccent;
+    box-shadow: 0px 2px 2px rgba($primaryBlackColor, 0.12), 0px 1px 2px rgba($primaryBlackColor, 0.08), 0px 3px 1px rgba($primaryBlackColor, 0.1);
+  }
+}
+
+.projects {
+  // .projects__sort-inner
+  &__sort-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+
+    @include media(tablet) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @include media(desktop) {
+      margin-bottom: 50px;
+    }
+  }
+}

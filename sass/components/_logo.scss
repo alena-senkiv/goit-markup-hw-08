@@ -1,0 +1,17 @@
+//Logo
+
+.logo {
+  // .logo__link
+  &__link {
+    @include fontProperty(Raleway, 24px, 700, 1.2, 0.03em);
+
+    @include media(desktop) {
+      @include fontProperty($size: 26px);
+    }
+  }
+
+  // .logo__link--accent
+  &__link--accent {
+    color: $colorAccent;
+  }
+}

@@ -1,0 +1,114 @@
+// // Portfolio page
+
+.projects {
+  // .projects__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.project {
+  // .project__item
+  &__item {
+    margin: 15px;
+    width: calc(100% - 30px);
+    @include media(tablet) {
+      width: calc((100% - 60px) / 2);
+    }
+    @include media(desktop) {
+      width: calc((100% - 90px) / 3);
+    }
+  }
+
+  // .project__pic
+  &__pic img {
+    @media screen and (min-width: $tablet) {
+      height: 294px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      object-fit: cover;
+    }
+  }
+
+  // .project__link
+  &__link {
+    display: block;
+    transition: box-shadow $timing;
+
+    // .project__link:focus, // .project__link:hover
+    &:focus,
+    &:hover {
+      box-shadow: 1px 4px 6px rgba($primaryBlackColor, 0.16), 0px 4px 4px rgba($primaryBlackColor, 0.06), 0px 1px 1px rgba($primaryBlackColor, 0.12);
+      outline: none;
+    }
+  }
+
+  // .project__overlay
+  &__overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  // .project__overlay-text
+  &__overlay-text {
+    position: absolute;
+    margin: 0;
+
+    @media screen and (max-width: 350px) {
+      padding: 24px;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+    padding: 63px 24px;
+    height: 100%;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: $primaryWhiteColor;
+    background-color: rgba($colorAccent, 0.9);
+
+    transform: translateY(100%);
+    transition: transform $timing;
+  }
+
+  // .project__link:focus .project__overlay-text,
+  // .project__link:hover .project__overlay-text
+  &__link:focus &__overlay-text,
+  &__link:hover &__overlay-text {
+    transform: translateY(0);
+  }
+
+  // .project__content
+  &__content {
+    padding: 20px 24px;
+
+    border: 1px solid #eeeeee;
+    border-top: 0;
+  }
+
+  // .project__title
+  &__title {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    font-size: 18px;
+    line-height: 2;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // .project__description
+  &__description {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    line-height: 1.9;
+    color: $secondaryColor;
+  }
+}

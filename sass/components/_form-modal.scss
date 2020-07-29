@@ -1,0 +1,151 @@
+/* Form */
+
+.form {
+  text-align: center;
+
+  //.form__title
+  &__title {
+    display: block;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  //.form__field
+  &__field {
+    position: relative;
+
+    display: block;
+    margin-top: 28px;
+
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: $secondaryColor;
+  }
+
+  //.form__input
+  &__input {
+    width: 100%;
+    padding: 12px 42px;
+
+    border: 1px solid rgba($primaryTextColor, 0.2);
+    border-radius: 4px;
+
+    transition: border-color $timing;
+  }
+
+  //.form__label
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+
+    transform: translateY(-50%) scale(1);
+    transition: transform $timing, color $timing;
+  }
+
+  //.form__comment
+  &__comment {
+    display: block;
+    height: 120px;
+    padding-left: 16px;
+    resize: none;
+  }
+
+  // .form__comment + .form__label
+  &__comment + &__label {
+    top: 12px;
+    left: 16px;
+    transform: scale(1);
+  }
+
+  // .form__icon-box
+  &__icon-box {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+
+    display: inline-block;
+
+    color: $primaryTextColor;
+    transform: translateY(-50%);
+
+    @extend %transitionColor;
+  }
+
+  // .form__field:focus-within .form__icon-box
+  &__field:focus-within &__icon-box {
+    color: $colorAccent;
+  }
+
+  //  .form__field:focus-within .form__label,
+  // .form__input:not(:placeholder-shown) + .form__label
+  &__field:focus-within &__label,
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translate(-26px, -36px) scale(0.86);
+    color: $colorAccent;
+  }
+
+  // .form__field:focus-within .form__comment + .form__label,
+  // .form__comment:not(:placeholder-shown) + .form__label
+  &__field:focus-within &__comment + &__label,
+  &__comment:not(:placeholder-shown) + &__label {
+    transform: translate(0px, -28px) scale(0.86);
+  }
+
+  // .form__field:focus-within .form__input
+  &__field:focus-within &__input {
+    border-color: $colorAccent;
+    outline: none;
+  }
+
+  // .form__link-policy
+  &__link-policy {
+    margin-left: 5px;
+
+    color: $colorAccent;
+    text-decoration: underline;
+  }
+
+  // .form__checkbox-label
+  &__checkbox-label {
+    @include flexProperty(flex);
+
+    margin: 20px 0 30px;
+
+    color: $secondaryColor;
+    @include media(predesktop) {
+      font-size: 12px;
+    }
+
+    // .form__checkbox-label::before
+    &::before {
+      content: '';
+      display: inline-flex;
+      flex-shrink: 0;
+      width: 16px;
+      height: 15px;
+      margin-right: 5px;
+
+      border: 2px solid $primaryTextColor;
+      border-radius: 2px;
+
+      transition: background $timing, border $timing;
+    }
+  }
+
+  // .form__checkbox-input:checked + .form__checkbox-label::before
+  &__checkbox-input:checked + &__checkbox-label::before {
+    background: url('../images/icons/check.svg') no-repeat center $colorAccent;
+
+    border: 2px solid $colorAccent;
+    border-radius: 2px;
+  }
+
+  // .form__checkbox-input:focus + .form__checkbox-label::before
+  &__checkbox-input:focus + &__checkbox-label::before {
+    border: 2px solid $colorAccent;
+  }
+}

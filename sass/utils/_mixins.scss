@@ -1,0 +1,53 @@
+@mixin flexProperty($type: inline-flex, $horisontal: center, $vertical: center) {
+  display: $type;
+  justify-content: $horisontal;
+  align-items: $vertical;
+}
+
+@mixin fontProperty($family: false, $size: false, $weight: false, $lh: false, $letter: false) {
+  @if $family {
+    font-family: $family;
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $letter {
+    letter-spacing: $letter;
+  }
+}
+
+// media breakpoints
+
+@mixin media($point, $width: min) {
+  @if $point==mobile {
+    @media screen and (#{$width}-width: $mobile) {
+      @content;
+    }
+  } @else if $point==tablet {
+    @media screen and (#{$width}-width: $tablet) {
+      @content;
+    }
+  } @else if $point==desktop {
+    @media screen and (#{$width}-width: $desktop) {
+      @content;
+    }
+  } @else if $point==premobile {
+    @media screen and (max-width: $mobile - 1px) {
+      @content;
+    }
+  } @else if $point==pretablet {
+    @media screen and (max-width: $tablet - 1px) {
+      @content;
+    }
+  } @else if $point==predesktop {
+    @media screen and (max-width: $desktop - 1px) {
+      @content;
+    }
+  }
+}

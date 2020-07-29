@@ -1,0 +1,50 @@
+// Subscribe form
+
+.subscribe {
+  @include media(predesktop) {
+    margin-top: 60px;
+  }
+
+  // .subscribe__form-input
+  &__form-input {
+    @include media(predesktop) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @include media(desktop) {
+      width: 358px;
+      margin-right: 12px;
+    }
+    padding: 15px 16px;
+
+    border: 1px solid rgba($primaryWhiteColor, 0.3);
+    border-radius: 4px;
+
+    font-size: 16px;
+    line-height: 1.3;
+
+    color: $primaryWhiteColor;
+    background-color: transparent;
+
+    transition: border $timing;
+
+    // .subscribe__form-input::placeholder
+    &::placeholder {
+      color: rgba($primaryWhiteColor, 0.6);
+
+      text-indent: 0;
+      transition: text-indent $timing;
+    }
+
+    // .subscribe__form-input:focus
+    &:focus {
+      border: 1px solid $colorAccent;
+      outline: none;
+    }
+
+    // .subscribe__form-input:focus::placeholder
+    &:focus::placeholder {
+      text-indent: 100%;
+    }
+  }
+}

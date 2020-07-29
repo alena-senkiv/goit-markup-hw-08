@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Портфолио</title>
+  </head>
+
+  <body>
+    <!-- Top Line - Navigation panel -->
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a class="logo__link" href="./" lang="en"><span class="logo__link--accent">Web</span>&nbsp;Studio</a>
+          <button class="header__menu-button is-open" type="button" aria-controls="menu-inner" aria-expanded="false" data-menu-button>
+            <svg class="icon--switch" aria-label="переключатель мобильного меню" width="40" height="40">
+              <use class="icon--cross" href="./images/icons/sprite.svg#cross"></use>
+              <use class="icon--menu" href="./images/icons/sprite.svg#menu"></use>
+            </svg>
+          </button>
+          <div class="header__menu" id="menu-inner" data-menu>
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./">Студия</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link header__menu-link--active" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#">Контакты</a></li>
+            </ul>
+            <ul class="header__adress">
+              <li class="header__adress-item">
+                <a class="header__adress-link" href="mailto:info@devstudio.com" lang="en" aria-label="Отправить письмо на электронную почту info@devstudio.com"
+                  ><svg class="icon--adress" width="16" height="12">
+                    <use href="./images/icons/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="header__adress-item">
+                <a class="header__adress-link" href="tel:+380961111111" aria-label="Позвонить по телефону +380961111111">
+                  <svg class="icon--adress" width="10" height="15">
+                    <use href="./images/icons/sprite.svg#smartphone"></use></svg
+                  >+380961111111
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Main content -->
+    <main>
+      <section class="section projects">
+        <div class="container">
+          <!-- Filter options -->
+          <div class="sort projects__sort-inner" role="group">
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="all" value="Все" checked />
+            <label class="sort__label" for="all">Все</label>
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="web-site" value="Веб-сайт" />
+            <label class="sort__label" for="web-site">Веб-сайты</label>
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="application" value="Приложение" />
+            <label class="sort__label" for="application">Приложения</label>
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="design" value="Дизайн" />
+            <label class="sort__label" for="design">Дизайн</label>
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="marketing" value="Маркетинг" />
+            <label class="sort__label" for="marketing">Маркетинг</label>
+          </div>
+
+          <!-- Projects -->
+
+          <h1 class="visually-hidden">Наши работы</h1>
+          <ul class="projects__list project">
+            <li class="project__item">
+              <a class="project__link" href="#" title="Технокряк" aria-label="Веб-сайт - Технокряк">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/1/img.webp 450w, ./images/project/1/img@2x.webp 900w, ./images/project/1/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/1/370.webp 370w, ./images/project/1/370@2x.webp 740w, ./images/project/1/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/1/img.jpg 450w, ./images/project/1/img@2x.jpg 900w, ./images/project/1/img@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/1/370.jpg 370w, ./images/project/1/370@2x.jpg 740w, ./images/project/1/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/1/img.jpg" alt="технокряк" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title">Технокряк</h2>
+                  <p class="project__description">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link" href="#" title="Постер New Orlean vs Golden Star" aria-label="Дизайн - Постер New Orlean vs Golden Star">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!
+                  </p>
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/2/img.webp 450w, ./images/project/2/img@2x.webp 900w, ./images/project/2/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/2/370.webp 370w, ./images/project/2/370@2x.webp 740w, ./images/project/2/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/2/img.jpg 450w, ./images/project/2/img@2x.jpg 900w, ./images/project/2/img@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/2/370.jpg 370w, ./images/project/2/370@2x.jpg 740w, ./images/project/2/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/2/img.jpg" alt="Постер New Orlean vs Golden Star" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+                  <p class="project__description">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link" href="#" title="Ресторан Seafood" aria-label="Приложение - Ресторан Seafood">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!
+                  </p>
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/3/img.webp 450w, ./images/project/3/img@2x.webp 900w, ./images/project/3/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/3/370.webp 370w, ./images/project/3/370@2x.webp 740w, ./images/project/3/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/3/450.jpg 450w, ./images/project/3/450@2x.jpg 900w, ./images/project/3/450@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/3/370.jpg 370w, ./images/project/3/370@2x.jpg 740w, ./images/project/3/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/3/img.jpg" alt="Ресторан Seafood" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title">Ресторан <span lang="en">Seafood</span></h2>
+                  <p class="project__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link" href="#" title="Проект Prime" aria-label="Маркетинг - Проект Prime">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!
+                  </p>
+
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/4/img.webp 450w, ./images/project/4/img@2x.webp 900w, ./images/project/4/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/4/370.webp 370w, ./images/project/4/370@2x.webp 740w, ./images/project/4/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/4/img.jpg 450w, ./images/project/4/img@2x.jpg 900w, ./images/project/4/img@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/4/370.jpg 370w, ./images/project/4/370@2x.jpg 740w, ./images/project/4/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/4/img.jpg" alt="Ресторан Seafood" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title">Проект <span lang="en">Prime</span></h2>
+                  <p class="project__description">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link" href="#" title="Проект Boxes" aria-label="Приложение - Проект Boxes">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!
+                  </p>
+
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/5/img.webp 450w, ./images/project/5/img@2x.webp 900w, ./images/project/5/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/5/370.webp 370w, ./images/project/5/370@2x.webp 740w, ./images/project/5/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/5/img.jpg 450w, ./images/project/5/img@2x.jpg 900w, ./images/project/5/img@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/5/370.jpg 370w, ./images/project/5/370@2x.jpg 740w, ./images/project/5/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/5/img.jpg" alt="Проект Boxes" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title">Проект <span lang="en">Boxes</span></h2>
+                  <p class="project__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link" href="#" title="Inspiration has no Borders" aria-label="Веб-сайт - Inspiration has no Borders">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!
+                  </p>
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/6/img.webp 450w, ./images/project/6/img@2x.webp 900w, ./images/project/6/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/6/370.webp 370w, ./images/project/6/370@2x.webp 740w, ./images/project/6/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/6/img.jpg 450w, ./images/project/6/img@2x.jpg 900w, ./images/project/6/img@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/6/370.jpg 370w, ./images/project/6/370@2x.jpg 740w, ./images/project/6/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/6/img.jpg" alt="Inspiration has no Borders" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title" lang="en">Inspiration has no Borders</h2>
+                  <p class="project__description">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link" href="#" title="Издание Limited Edition" aria-label="Дизайн - Издание Limited Edition">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!
+                  </p>
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/7/img.webp 450w, ./images/project/7/img@2x.webp 900w, ./images/project/7/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/7/370.webp 370w, ./images/project/6/370@2x.webp 740w, ./images/project/7/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/7/img.jpg 450w, ./images/project/6/img@2x.jpg 900w, ./images/project/7/img@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/7/370.jpg 370w, ./images/project/7/370@2x.jpg 740w, ./images/project/7/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/7/img.jpg" alt="Издание Limited Edition" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title">Издание <span lang="en">Limited Edition</span></h2>
+                  <p class="project__description">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link" href="#" title="Проект LAB" aria-label="Маркетинг - Проект LAB">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!
+                  </p>
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/8/img.webp 450w, ./images/project/8/img@2x.webp 900w, ./images/project/8/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/8/370.webp 370w, ./images/project/8/370@2x.webp 740w, ./images/project/8/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/8/img.jpg 450w, ./images/project/8/img@2x.jpg 900w, ./images/project/8/img@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/8/370.jpg 370w, ./images/project/8/370@2x.jpg 740w, ./images/project/8/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/8/img.jpg" alt="проект LAB" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title">Проект <span lang="en">LAB</span></h2>
+                  <p class="project__description">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link" href="#" title="Growing Business" aria-label="Приложение - Growing Business">
+                <div class="project__overlay">
+                  <p class="project__overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!
+                  </p>
+                  <picture class="project__pic">
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/9/img.webp 450w, ./images/project/9/img@2x.webp 900w, ./images/project/9/img@3x.webp 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="./images/project/9/370.webp 370w, ./images/project/9/370@2x.webp 740w, ./images/project/9/370@3x.webp 1110w"
+                      media="(min-width:768px)"
+                      sizes="370px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/9/img.jpg 450w, ./images/project/9/img@2x.jpg 900w, ./images/project/9/img@3x.jpg 1350w"
+                      media="(max-width:767px)"
+                      sizes="450px"
+                    />
+                    <source
+                      type="image/jpg"
+                      srcset="./images/project/9/370.jpg 370w, ./images/project/9/370@2x.jpg 740w, ./images/project/9/370@3x.jpg 1110w"
+                      media="(min-width: 768px)"
+                      sizes="370px"
+                    />
+                    <img src="./images/project/9/img.jpg" alt="Growing Business" />
+                  </picture>
+                </div>
+                <div class="project__content">
+                  <h2 class="project__title" lang="en">Growing Business</h2>
+                  <p class="project__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section">
+      <div class="footer__main container">
+        <div class="footer__adress-block">
+          <div class="footer__logo logo">
+            <a class="logo__link" href="./" lang="en"><span class="logo__link--accent" title="Перейти на главную страницу сайта">Web</span>&nbsp;Studio</a>
+          </div>
+          <address class="footer__adress">
+            <a class="footer__adress-link footer__adress-link--location" href="https://goo.gl/maps/uhBHnLKwiFKhSQN66" target="_blank" rel="noopener nofollow" aria-label="перейти в Google Maps"
+              >г. Киев, пр-т Леси Украинки, 26</a
+            >
+            <a class="footer__adress-link" href="mailto:info@devstudio.com" lang="en" aria-label="Отправить письмо на электронную почту info@devstudio.com">info@devstudio.com</a>
+            <a class="footer__adress-link" href="tel:+380961111111" aria-label="Позвонить по телефону +380961111111">+380961111111</a>
+          </address>
+        </div>
+        <div class="footer__social-block" role="group">
+          <b class="request">Присоединяйтесь</b>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#" title="instagram" target="_blank" rel="noopener nofollow" aria-label="перейти на профиль в instagram">
+                <svg class="icon">
+                  <use href="./images/icons/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="twitter" target="_blank" rel="noopener nofollow" aria-label="перейти на профиль в twitter">
+                <svg class="icon">
+                  <use href="./images/icons/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="facebook" target="_blank" rel="noopener nofollow" aria-label="перейти на страницу в facebook">
+                <svg class="icon">
+                  <use href="./images/icons/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="linkedin" target="_blank" rel="noopener nofollow" aria-label="перейти на страницу в linkedin">
+                <svg class="icon">
+                  <use href="./images/icons/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subscribe">
+          <b class="request">Подпишитесь на рассылку</b>
+          <form class="subscribe__form" action="#" method="POST" id="subscribe">
+            <input class="subscribe__form-input" type="email" name="subscribe" placeholder="E-mail" autocomplete="on" required />
+            <button class="button button--subscribe" form="subscribe" type="submit" value="Подписаться">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/subscribe.js"></script>
+  </body>
+</html>

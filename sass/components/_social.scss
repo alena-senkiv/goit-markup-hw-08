@@ -1,0 +1,45 @@
+/* social icons wrapper*/
+
+.social {
+  display: flex;
+  justify-content: center;
+
+  // .social__item
+  &__item {
+    // .social__item:not(:last-child)
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  // .social__link
+  &__link {
+    @include flexProperty;
+    background-color: rgba($primaryWhiteColor, 0.1);
+    border-radius: 50%;
+    color: $primaryWhiteColor;
+    width: 44px;
+    height: 44px;
+
+    transition: background-color $timing, color $timing;
+
+    // .social__link::focus, // .social__link:hover
+    &:focus,
+    &:hover {
+      background-color: $colorAccent;
+      outline: none;
+    }
+  }
+
+  // .social__link--color
+  &__link--color {
+    color: $iconColor;
+    background-color: transparent;
+
+    // .social__link--color:focus, // .social__link--color:hover
+    &:focus,
+    &:hover {
+      color: $primaryWhiteColor;
+    }
+  }
+}

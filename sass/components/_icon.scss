@@ -1,0 +1,57 @@
+// .icon
+.icon {
+  width: 20px;
+  height: 20px;
+  --color3: currentColor;
+
+  // .icon--size
+  &--size {
+    width: 70px;
+    height: 70px;
+  }
+
+  // .icon--color
+  &--color {
+    --color3: currentColor;
+  }
+
+  // .icon--close
+  &--close {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    --color6: currentColor;
+
+    transform: translate(-50%, -50%);
+  }
+
+  // .icon--form
+  &--form {
+    width: 18px;
+    height: 18px;
+    --color7: currentColor;
+  }
+
+  // .icon--adress
+  &--adress {
+    margin-right: 10px;
+    --color4: currentColor;
+  }
+
+  // .icon-switch
+  &--switch {
+    --color7: currentColor;
+  }
+  // .icon--cross
+  &--cross {
+    display: none;
+  }
+
+  .header__menu-button.is-open &--cross {
+    display: block;
+  }
+
+  .header__menu-button.is-open &--menu {
+    display: none;
+  }
+}

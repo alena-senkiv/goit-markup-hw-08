@@ -1,0 +1,72 @@
+/* Hero */
+
+//.hero
+.hero {
+  position: relative;
+  max-width: 1600px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: $bgOpacityColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  // mobile
+  background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero.jpg');
+
+  @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+    background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero@2x.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
+    background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero@3x.jpg');
+  }
+
+  // tablet
+  @include media(tablet) {
+    background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-tabl.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+      background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-tabl@2x.jpg');
+    }
+
+    @media screen and (min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
+      background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-tabl@3x.jpg');
+    }
+  }
+  // desktop
+  @include media(desktop) {
+    height: 600px;
+    background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-desk.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+      background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-desk@2x.jpg');
+    }
+
+    @media screen and (min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
+      background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-desk@3x.jpg');
+    }
+  }
+
+  //.hero__content
+  &__content {
+    @extend %positionCenter;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  //.hero__title
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    color: $primaryWhiteColor;
+    @include fontProperty($size: 26px, $weight: 900, $lh: 1.6, $letter: 0.06em);
+
+    @include media(desktop) {
+      @include fontProperty($size: 44px, $lh: 1.4);
+    }
+  }
+}

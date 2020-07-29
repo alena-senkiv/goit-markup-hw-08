@@ -1,0 +1,47 @@
+/* Button */
+
+// .button
+.button {
+  @include flexProperty;
+
+  min-width: 200px;
+  padding: 10px 32px;
+
+  border-radius: 4px;
+  cursor: pointer;
+  color: $primaryWhiteColor;
+  background-color: $colorAccent;
+  box-shadow: 0px 4px 4px rgba($primaryBlackColor, 0.15);
+
+  @include fontProperty($size: 16px, $weight: 700, $lh: 1.9, $letter: 0.06em);
+  transition: background-color $timing;
+
+  // .button:active
+  &:active {
+    box-shadow: inset 0px 2px 2px rgba($primaryBlackColor, 0.3);
+  }
+
+  // .button:focus, .button:hover
+  &:focus,
+  &:hover {
+    background-color: $hoverBtn;
+  }
+
+  // .button--send
+  &--send {
+    margin: 0 auto;
+  }
+
+  // .button--subscribe::after
+  &--subscribe::after {
+    content: '';
+
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+
+    background-image: url(../images/icons/send.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
