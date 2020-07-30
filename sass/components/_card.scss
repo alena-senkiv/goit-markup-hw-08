@@ -23,7 +23,7 @@
   }
 
   // .project__pic
-  &__pic img {
+  &__pic {
     @media screen and (min-width: $tablet) {
       height: 294px;
     }

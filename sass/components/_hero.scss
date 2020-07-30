@@ -11,7 +11,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
+  @include media(desktop) {
+    height: 600px;
+  }
   // mobile
   background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero.jpg');
 
@@ -23,8 +25,8 @@
     background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero@3x.jpg');
   }
 
-  // tablet
-  @include media(tablet) {
+  // mob-tablet
+  @media screen and (min-width: $mobile + 1px) {
     background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-tabl.jpg');
 
     @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
@@ -35,9 +37,8 @@
       background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-tabl@3x.jpg');
     }
   }
-  // desktop
-  @include media(desktop) {
-    height: 600px;
+  // tablet-desktop-max
+  @media screen and (min-width: $tablet + 1px) {
     background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero/hero-desk.jpg');
 
     @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {

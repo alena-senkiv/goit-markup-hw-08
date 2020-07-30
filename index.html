@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="description" content="" />
+    <meta name="description" content="Сайт веб студии" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
@@ -164,31 +164,41 @@
           <h2 class="specialisation__title title">Чем мы занимаемся</h2>
           <ul class="section__list">
             <li class="specialisation__item">
-              <picture class="specialisation__item-img">
-                <source
-                  type="image/webp"
-                  srcset="./images/spec/notebook.webp 370w, ./images/spec/notebook@2x.webp 740w, ./images/spec/notebook@3x.webp 1110w"
-                  sizes="370px"
-                  media="(min-width: 1200px)"
+              <picture>
+                <source type="image/webp" srcset="./images/spec/notebook.webp, ./images/spec/notebook@2x.webp 2x, ./images/spec/notebook@3x.webp 3x" />
+                <img
+                  class="specialisation__item-img"
+                  srcset="./images/spec/notebook.jpg, ./images/spec/notebook@2x.jpg 2x, ./images/spec/notebook@3x.jpg 3x"
+                  src="./images/spec/notebook.jpg"
+                  alt="Ноутбук"
+                  loading="lazy"
                 />
-                <source type="image/jpg" srcset="./images/spec/notebook.jpg 370w, ./images/spec/notebook@2x.jpg 740w, ./images/spec/notebook@3x.jpg 1110w" sizes="370px" media="(min-width: 1200px)" />
-                <img src="./images/spec/notebook.jpg" alt="Ноутбук" />
               </picture>
               <h3 class="specialisation__item-title">Десктопные приложения</h3>
             </li>
             <li class="specialisation__item">
-              <picture class="specialisation__item-img">
-                <source type="image/webp" srcset="./images/spec/mobile.webp 370w, ./images/spec/mobile@2x.webp 740w, ./images/spec/mobile@3x.webp 1110w" media="(min-width: 1200px)" sizes="370px" />
-                <source type="image/jpg" srcset="./images/spec/mobile.jpg 370w, ./images/spec/mobile@2x.jpg 740w, ./images/spec/mobile@3x.jpg 1110w" media="(min-width: 1200px)" sizes="370px" />
-                <img src="./images/spec/mobile.jpg" alt="Смартфон" />
+              <picture>
+                <source type="image/webp" srcset="./images/spec/mobile.webp, ./images/spec/mobile@2x.webp 2x, ./images/spec/mobile@3x.webp 3x" />
+                <img
+                  class="specialisation__item-img"
+                  srcset="./images/spec/mobile.jpg, ./images/spec/mobile@2x.jpg 2x, ./images/spec/mobile@3x.jpg 3x"
+                  src="./images/spec/mobile.jpg"
+                  alt="Смартфон"
+                  loading="lazy"
+                />
               </picture>
               <h3 class="specialisation__item-title">Мобильные приложения</h3>
             </li>
             <li class="specialisation__item">
-              <picture class="specialisation__item-img">
-                <source type="image/webp" srcset="./images/spec/monitor.webp 370w, ./images/spec/monitor@2x.webp 740w, ./images/spec/monitor@3x.webp 1110w" sizes="370px" media="(min-width: 1200px)" />
-                <source type="image/jpg" srcset="./images/spec/monitor.jpg 370w, ./images/spec/monitor@2x.jpg 740w, ./images/spec/monitor@3x.jpg 1110w" sizes="370px" media="(min-width: 1200px)" />
-                <img src="./images/spec/monitor.jpg" alt="Смартфон" />
+              <picture>
+                <source type="image/webp" srcset="./images/spec/monitor.webp, ./images/spec/monitor@2x.webp 2x, ./images/spec/monitor@3x.webp 3x" />
+                <img
+                  class="specialisation__item-img"
+                  srcset="./images/spec/monitor.jpg, ./images/spec/monitor@2x.jpg 2x, ./images/spec/monitor@3x.jpg 3x"
+                  src="./images/spec/monitor.jpg"
+                  alt="Смартфон"
+                  loading="lazy"
+                />
               </picture>
               <h3 class="specialisation__item-title">Дизайнерские решения</h3>
             </li>
@@ -202,46 +212,31 @@
           <h2 class="team___title title">Наша команда</h2>
           <ul class="section__list">
             <li class="team__item">
-              <picture class="team__item-img">
+              <picture>
                 <source
                   type="image/webp"
                   srcset="./images/team/kucherenko/450.webp 450w, ./images/team/kucherenko/450@2x.webp 900w, ./images/team/kucherenko/450@3x.webp 1350w"
                   media="(max-width: 767px)"
-                  sizes="450px"
+                  sizes="100vw"
                 />
                 <source
                   type="image/webp"
                   srcset="./images/team/kucherenko/270.webp 270w, ./images/team/kucherenko/270@2x.webp 540w, ./images/team/kucherenko/270@3x.webp 810w"
                   media="(min-width: 1200px)"
-                  sizes="270px"
+                  sizes="25vw"
                 />
                 <source
                   type="image/webp"
                   srcset="./images/team/kucherenko/354.webp 354w, ./images/team/kucherenko/354@2x.webp 708w, ./images/team/kucherenko/354@3x.webp 1062w"
                   media="(min-width: 768px)"
-                  sizes="354px"
+                  sizes="50vw"
                 />
 
-                <source
-                  type="image/jpg"
-                  srcset="./images/team/kucherenko/450.jpg 450w, ./images/team/kucherenko/450@2x.jpg 900w, ./images/team/kucherenko/450@3x.jpg 1350w"
-                  media="(max-width: 767px)"
-                  sizes="450px"
-                />
-                <source
-                  type="image/jpg"
-                  srcset="./images/team/kucherenko/270.jpg 270w, ./images/team/kucherenko/270@2x.jpg 540w, ./images/team/kucherenko/270@3x.jpg 810w"
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  type="image/jpg"
-                  srcset="./images/team/kucherenko/354.jpg 354w, ./images/team/kucherenko/354@2x.jpg 708w, ./images/team/kucherenko/354@3x.jpg 1062w"
-                  media="(min-width: 768px)"
-                  sizes="354px"
-                />
+                <source srcset="./images/team/kucherenko/450.jpg 450w, ./images/team/kucherenko/450@2x.jpg 900w, ./images/team/kucherenko/450@3x.jpg 1350w" media="(max-width: 767px)" sizes="100vw" />
+                <source srcset="./images/team/kucherenko/270.jpg 270w, ./images/team/kucherenko/270@2x.jpg 540w, ./images/team/kucherenko/270@3x.jpg 810w" media="(min-width: 1200px)" sizes="25vw" />
+                <source srcset="./images/team/kucherenko/354.jpg 354w, ./images/team/kucherenko/354@2x.jpg 708w, ./images/team/kucherenko/354@3x.jpg 1062w" media="(min-width: 768px)" sizes="50vw" />
 
-                <img src="./images/team/kucherenko/450.jpg" alt="фото члена команды" />
+                <img class="team__item-img" src="./images/team/kucherenko/354.jpg" alt="фото члена команды" />
               </picture>
               <h3 class="team__item-title">Николай Кучеренко</h3>
               <p class="team__item-description" lang="en">Product Designer</p>
@@ -277,46 +272,46 @@
               </ul>
             </li>
             <li class="team__item">
-              <picture class="team__item-img">
+              <picture>
                 <source
                   type="image/webp"
                   srcset="./images/team/ivanova/450.webp 450w, ./images/team/ivanova/450@2x.webp 900w, ./images/team/ivanova/450@3x.webp 1350w"
                   media="(max-width: 767px)"
-                  sizes="450px"
+                  sizes="100vw"
                 />
                 <source
                   type="image/webp"
                   srcset="./images/team/ivanova/270.webp 270w, ./images/team/ivanova/270@2x.webp 540w, ./images/team/ivanova/270@3x.webp 810w"
                   media="(min-width: 1200px)"
-                  sizes="270px"
+                  sizes="25vw"
                 />
                 <source
                   type="image/webp"
                   srcset="./images/team/ivanova/354.webp 354w, ./images/team/ivanova/354@2x.webp 708w, ./images/team/ivanova/354@3x.webp 1062w"
                   media="(min-width: 768px)"
-                  sizes="354px"
+                  sizes="50vw"
                 />
 
                 <source
                   type="image/jpg"
                   srcset="./images/team/ivanova/450.jpg 450w, ./images/team/ivanova/450@2x.jpg 900w, ./images/team/ivanova/450@3x.jpg 1350w"
                   media="(max-width: 767px)"
-                  sizes="450px"
+                  sizes="100vw"
                 />
                 <source
                   type="image/jpg"
                   srcset="./images/team/ivanova/270.jpg 270w, ./images/team/ivanova/270@2x.jpg 540w, ./images/team/ivanova/270@3x.jpg 810w"
                   media="(min-width: 1200px)"
-                  sizes="270px"
+                  sizes="25vw"
                 />
                 <source
                   type="image/jpg"
                   srcset="./images/team/ivanova/354.jpg 354w, ./images/team/ivanova/354@2x.jpg 708w, ./images/team/ivanova/354@3x.jpg 1062w"
                   media="(min-width: 768px)"
-                  sizes="354px"
+                  sizes="50vw"
                 />
 
-                <img src="./images/team/ivanova/450.jpg" alt="фото члена команды" />
+                <img class="team__item-img" src="./images/team/ivanova/354.jpg" alt="фото члена команды" />
               </picture>
               <h3 class="team__item-title">Ольга Иванова</h3>
               <p class="team__item-description" lang="en">Frontend Developer</p>
@@ -352,46 +347,46 @@
               </ul>
             </li>
             <li class="team__item">
-              <picture class="team__item-img">
+              <picture>
                 <source
                   type="image/webp"
                   srcset="./images/team/shevchenko/450.webp 450w, ./images/team/shevchenko/450@2x.webp 900w, ./images/team/shevchenko/450@3x.webp 1350w"
                   media="(max-width: 767px)"
-                  sizes="450px"
+                  sizes="100vw"
                 />
                 <source
                   type="image/webp"
                   srcset="./images/team/shevchenko/270.webp 270w, ./images/team/shevchenko/270@2x.webp 540w, ./images/team/shevchenko/270@3x.webp 810w"
                   media="(min-width: 1200px)"
-                  sizes="270px"
+                  sizes="25vw"
                 />
                 <source
                   type="image/webp"
                   srcset="./images/team/shevchenko/354.webp 354w, ./images/team/shevchenko/354@2x.webp 708w, ./images/team/shevchenko/354@3x.webp 1062w"
                   media="(min-width: 768px)"
-                  sizes="354px"
+                  sizes="50vw"
                 />
 
                 <source
                   type="image/jpg"
                   srcset="./images/team/shevchenko/450.jpg 450w, ./images/team/shevchenko/450@2x.jpg 900w, ./images/team/shevchenko/450@3x.jpg 1350w"
                   media="(max-width: 767px)"
-                  sizes="450px"
+                  sizes="100vw"
                 />
                 <source
                   type="image/jpg"
                   srcset="./images/team/shevchenko/270.jpg 270w, ./images/team/shevchenko/270@2x.jpg 540w, ./images/team/shevchenko/270@3x.jpg 810w"
                   media="(min-width: 1200px)"
-                  sizes="270px"
+                  sizes="25vw"
                 />
                 <source
                   type="image/jpg"
                   srcset="./images/team/shevchenko/354.jpg 354w, ./images/team/shevchenko/354@2x.jpg 708w, ./images/team/shevchenko/354@3x.jpg 1062w"
                   media="(min-width: 768px)"
-                  sizes="354px"
+                  sizes="50vw"
                 />
 
-                <img src="./images/team/shevchenko/450.jpg" alt="фото члена команды" />
+                <img class="team__item-img" src="./images/team/shevchenko/354.jpg" alt="фото члена команды" />
               </picture>
               <h3 class="team__item-title">Андрей Шевченко</h3>
               <p class="team__item-description" lang="en">Marketing</p>
@@ -427,46 +422,46 @@
               </ul>
             </li>
             <li class="team__item">
-              <picture class="team__item-img">
+              <picture>
                 <source
                   type="image/webp"
                   srcset="./images/team/nikolaev/450.webp 450w, ./images/team/nikolaev/450@2x.webp 900w, ./images/team/nikolaev/450@3x.webp 1350w"
                   media="(max-width: 767px)"
-                  sizes="450px"
+                  sizes="100vw"
                 />
                 <source
                   type="image/webp"
                   srcset="./images/team/nikolaev/270.webp 270w, ./images/team/nikolaev/270@2x.webp 540w, ./images/team/nikolaev/270@3x.webp 810w"
                   media="(min-width: 1200px)"
-                  sizes="270px"
+                  sizes="25vw"
                 />
                 <source
                   type="image/webp"
                   srcset="./images/team/nikolaev/354.webp 354w, ./images/team/nikolaev/354@2x.webp 708w, ./images/team/nikolaev/354@3x.webp 1062w"
                   media="(min-width: 768px)"
-                  sizes="354px"
+                  sizes="50vw"
                 />
 
                 <source
                   type="image/jpg"
                   srcset="./images/team/nikolaev/450.jpg 450w, ./images/team/nikolaev/450@2x.jpg 900w, ./images/team/nikolaev/450@3x.jpg 1350w"
                   media="(max-width: 767px)"
-                  sizes="450px"
+                  sizes="100vw"
                 />
                 <source
                   type="image/jpg"
                   srcset="./images/team/nikolaev/270.jpg 270w, ./images/team/nikolaev/270@2x.jpg 540w, ./images/team/nikolaev/270@3x.jpg 810w"
                   media="(min-width: 1200px)"
-                  sizes="270px"
+                  sizes="25vw"
                 />
                 <source
                   type="image/jpg"
                   srcset="./images/team/nikolaev/354.jpg 354w, ./images/team/nikolaev/354@2x.jpg 708w, ./images/team/nikolaev/354@3x.jpg 1062w"
                   media="(min-width: 768px)"
-                  sizes="354px"
+                  sizes="50vw"
                 />
 
-                <img src="./images/team/nikolaev/450.jpg" alt="фото члена команды" />
+                <img class="team__item-img" src="./images/team/nikolaev/354.jpg" alt="фото члена команды" />
               </picture>
               <h3 class="team__item-title">Иван Николаев</h3>
               <p class="team__item-description" lang="en">UI Designer</p>
@@ -608,7 +603,8 @@
         <div class="subscribe">
           <b class="request">Подпишитесь на рассылку</b>
           <form class="subscribe__form" action="#" method="POST" id="subscribe">
-            <input class="subscribe__form-input" type="email" name="subscribe" placeholder="E-mail" autocomplete="on" required />
+            <input class="subscribe__form-input" id="email" type="email" name="subscribe" placeholder="E-mail" autocomplete="on" required />
+            <label class="visually-hidden" for="email">введите свой адресс электронной почты</label>
             <button class="button button--subscribe" form="subscribe" type="submit" value="Подписаться">Подписаться</button>
           </form>
         </div>
