@@ -1209,7 +1209,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer__main {
-    text-align: start;
+    text-align: left;
   }
 }
 
