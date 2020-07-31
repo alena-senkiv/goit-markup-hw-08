@@ -60,23 +60,22 @@
         <div class="container">
           <!-- Filter options -->
           <div class="sort projects__sort-inner" role="group">
-            <input class="sort__button visually-hidden" type="radio" name="filter" id="all" value="Все" checked />
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="all" value="Все" checked onclick="filterSelection('all')" />
             <label class="sort__label" for="all">Все</label>
-            <input class="sort__button visually-hidden" type="radio" name="filter" id="web-site" value="Веб-сайт" />
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="web-site" value="Веб-сайт" onclick="filterSelection('site')" />
             <label class="sort__label" for="web-site">Веб-сайты</label>
-            <input class="sort__button visually-hidden" type="radio" name="filter" id="application" value="Приложение" />
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="application" value="Приложение" onclick="filterSelection('application')" />
             <label class="sort__label" for="application">Приложения</label>
-            <input class="sort__button visually-hidden" type="radio" name="filter" id="design" value="Дизайн" />
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="design" value="Дизайн" onclick="filterSelection('design')" />
             <label class="sort__label" for="design">Дизайн</label>
-            <input class="sort__button visually-hidden" type="radio" name="filter" id="marketing" value="Маркетинг" />
+            <input class="sort__button visually-hidden" type="radio" name="filter" id="marketing" value="Маркетинг" onclick="filterSelection('marketing')" />
             <label class="sort__label" for="marketing">Маркетинг</label>
           </div>
-
           <!-- Projects -->
 
           <h1 class="visually-hidden">Наши работы</h1>
           <ul class="projects__list project">
-            <li class="project__item">
+            <li class="project__item site">
               <a class="project__link" href="#" title="Технокряк" aria-label="Веб-сайт - Технокряк">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -117,7 +116,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__item">
+            <li class="project__item design">
               <a class="project__link" href="#" title="Постер New Orlean vs Golden Star" aria-label="Дизайн - Постер New Orlean vs Golden Star">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -157,7 +156,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__item">
+            <li class="project__item application">
               <a class="project__link" href="#" title="Ресторан Seafood" aria-label="Приложение - Ресторан Seafood">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -197,7 +196,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__item">
+            <li class="project__item marketing">
               <a class="project__link" href="#" title="Проект Prime" aria-label="Маркетинг - Проект Prime">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -238,7 +237,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__item">
+            <li class="project__item application">
               <a class="project__link" href="#" title="Проект Boxes" aria-label="Приложение - Проект Boxes">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -279,7 +278,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__item">
+            <li class="project__item site">
               <a class="project__link" href="#" title="Inspiration has no Borders" aria-label="Веб-сайт - Inspiration has no Borders">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -319,7 +318,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__item">
+            <li class="project__item design">
               <a class="project__link" href="#" title="Издание Limited Edition" aria-label="Дизайн - Издание Limited Edition">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -359,7 +358,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__item">
+            <li class="project__item marketing">
               <a class="project__link" href="#" title="Проект LAB" aria-label="Маркетинг - Проект LAB">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -399,7 +398,7 @@
                 </div>
               </a>
             </li>
-            <li class="project__item">
+            <li class="project__item application">
               <a class="project__link" href="#" title="Growing Business" aria-label="Приложение - Growing Business">
                 <div class="project__overlay">
                   <p class="project__overlay-text">
@@ -505,5 +504,41 @@
 
     <script src="js/menu.js"></script>
     <script src="js/subscribe.js"></script>
+
+    <script>
+      filterSelection('all');
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName('project__item');
+        if (c == 'all') c = '';
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], 'show');
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], 'show');
+        }
+      }
+
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(' ');
+        arr2 = name.split(' ');
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += ' ' + arr2[i];
+          }
+        }
+      }
+
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(' ');
+        arr2 = name.split(' ');
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(' ');
+      }
+    </script>
   </body>
 </html>

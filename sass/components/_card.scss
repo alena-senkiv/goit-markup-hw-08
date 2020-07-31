@@ -12,6 +12,7 @@
 .project {
   // .project__item
   &__item {
+    display: none;
     margin: 15px;
     width: calc(100% - 30px);
     @include media(tablet) {
@@ -111,4 +112,8 @@
     line-height: 1.9;
     color: $secondaryColor;
   }
+}
+
+.show {
+  display: block;
 }
