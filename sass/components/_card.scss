@@ -1,6 +1,23 @@
 // // Portfolio page
 
 .projects {
+  // .projects__sort-inner
+  &__sort-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+
+    @include media(tablet) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @include media(desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
   // .projects__list
   &__list {
     display: flex;
@@ -114,6 +131,7 @@
   }
 }
 
+//  if .project__item.show
 .show {
   display: block;
 }
